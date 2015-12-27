@@ -1,0 +1,5 @@
+C:\Users\Miika\Documents\Visual Studio 2015\Projects\TempUnRoot\TempUnRoot\obj\Release\android\assets\TempUnRoot.dll
+C:\Users\Miika\Documents\Visual Studio 2015\Projects\TempUnRoot\TempUnRoot\obj\Release\android\assets\Mono.Android.dll
+C:\Users\Miika\Documents\Visual Studio 2015\Projects\TempUnRoot\TempUnRoot\obj\Release\android\assets\mscorlib.dll
+C:\Users\Miika\Documents\Visual Studio 2015\Projects\TempUnRoot\TempUnRoot\obj\Release\android\assets\System.Core.dll
+C:\Users\Miika\Documents\Visual Studio 2015\Projects\TempUnRoot\TempUnRoot\obj\Release\android\assets\System.dll
