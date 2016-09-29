@@ -1,4 +1,0 @@
-TempUnRoot.MainActivity, TempUnRoot;md5caf6120d962a4a82ba01d7049879d2f6.MainActivity
-TempUnRoot.MainActivity, TempUnRoot, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5caf6120d962a4a82ba01d7049879d2f6.MainActivity
-TempUnRoot.MainActivity;md5caf6120d962a4a82ba01d7049879d2f6.MainActivity
-tempunroot.MainActivity;md5caf6120d962a4a82ba01d7049879d2f6.MainActivity

@@ -1,7 +1,0 @@
-C:\Users\Miika\Documents\Visual Studio 2015\Projects\TempUnRoot\TempUnRoot\obj\Debug\assemblies\TempUnRoot.dll
-C:\Users\Miika\Documents\Visual Studio 2015\Projects\TempUnRoot\TempUnRoot\obj\Debug\assemblies\Mono.Android.dll
-C:\Users\Miika\Documents\Visual Studio 2015\Projects\TempUnRoot\TempUnRoot\obj\Debug\assemblies\mscorlib.dll
-C:\Users\Miika\Documents\Visual Studio 2015\Projects\TempUnRoot\TempUnRoot\obj\Debug\assemblies\System.Core.dll
-C:\Users\Miika\Documents\Visual Studio 2015\Projects\TempUnRoot\TempUnRoot\obj\Debug\assemblies\System.dll
-C:\Users\Miika\Documents\Visual Studio 2015\Projects\TempUnRoot\TempUnRoot\obj\Debug\assemblies\System.Xml.dll
-C:\Users\Miika\Documents\Visual Studio 2015\Projects\TempUnRoot\TempUnRoot\obj\Debug\assemblies\System.Xml.Linq.dll

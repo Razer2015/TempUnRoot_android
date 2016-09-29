@@ -61,8 +61,31 @@ namespace TempUnRoot
             Java.Lang.Process rootProcess;
             try
             {
-                rootProcess = Java.Lang.Runtime.GetRuntime().Exec(new String[] { "su", "-c", "mount -o rw,remount /system && mv /system/xbin/su /system/xbin/subackup && mv /system/bin/su /system/bin/subackup && mount -o ro,remount /system" });
+                rootProcess = Java.Lang.Runtime.GetRuntime().Exec(new String[] 
+                {
+                    "su",
+                    "-c",
+                    "mount -o rw,remount /system && " + 
+                    "mv /system/xbin/su /system/xbin/subackup && " + 
+                    "mv /system/bin/su /system/bin/subackup && " +
+                    "mount -o ro,remount /system"
+                });
                 rootProcess.WaitFor();
+
+                try
+                {
+                    Java.Lang.Process p = Java.Lang.Runtime.GetRuntime().Exec("subackup -c cd /system/bin/.ext && ls -ld .?* && mv /system/bin/.ext/.su /system/bin/.ext/.subackup ");
+                    Java.IO.BufferedReader input = new Java.IO.BufferedReader(
+                                        new Java.IO.InputStreamReader(p.InputStream));
+                    String line = null;
+                    while ((line = input.ReadLine()) != null) {
+                        Console.WriteLine(line);
+                    }
+                }
+                catch (Java.Lang.InterruptedException e)
+                {
+                    e.PrintStackTrace();
+                }
                 return (true);
             }
             catch (Java.Lang.InterruptedException e)
@@ -77,8 +100,31 @@ namespace TempUnRoot
             Java.Lang.Process rootProcess;
             try
             {
-                rootProcess = Java.Lang.Runtime.GetRuntime().Exec(new String[] { "subackup", "-c", "mount -o rw,remount /system && mv /system/xbin/subackup /system/xbin/su && mv /system/bin/subackup /system/bin/su && mount -o ro,remount /system" });
+                rootProcess = Java.Lang.Runtime.GetRuntime().Exec(new String[] 
+                {
+                    "subackup",
+                    "-c",
+                    "mount -o rw,remount /system && " + 
+                    "mv /system/xbin/subackup /system/xbin/su && " + 
+                    "mv /system/bin/subackup /system/bin/su && " +
+                    "mount -o ro,remount /system"
+                });
                 rootProcess.WaitFor();
+                try
+                {
+                    Java.Lang.Process p = Java.Lang.Runtime.GetRuntime().Exec("su -c cd /system/bin/.ext && ls -ld .?* && mv /system/bin/.ext/.subackup /system/bin/.ext/.su ");
+                    Java.IO.BufferedReader input = new Java.IO.BufferedReader(
+                                        new Java.IO.InputStreamReader(p.InputStream));
+                    String line = null;
+                    while ((line = input.ReadLine()) != null)
+                    {
+                        Console.WriteLine(line);
+                    }
+                }
+                catch (Java.Lang.InterruptedException e)
+                {
+                    e.PrintStackTrace();
+                }
                 return (true);
             }
             catch (Java.Lang.InterruptedException e)
@@ -99,7 +145,7 @@ namespace TempUnRoot
 
         private static Boolean checkRootMethod()
         {
-            String[] paths = { "/system/bin/su", "/system/xbin/su" };
+            String[] paths = { "/system/bin/su", "/system/xbin/su"/*, "/system/bin/.ext/.su"*/ };
             foreach (String path in paths)
             {
                 if (File.Exists(path)) return true;
